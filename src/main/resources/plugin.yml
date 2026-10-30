@@ -1,0 +1,17 @@
+name: RTPBiomes
+version: 1.0.0
+main: dev.rtpbiomes.RTPPlugin
+api-version: '1.21'
+description: Biome random teleport with menu, isolated self-resetting worlds and click-bots.
+commands:
+  rtp:
+    description: Open the biome RTP menu (or /rtp <biome>, /rtp leave)
+    permission: rtpbiomes.use
+  rtpbot:
+    description: "Admin: /rtpbot spawn <biome> | remove"
+    permission: rtpbiomes.admin
+permissions:
+  rtpbiomes.use:
+    default: true
+  rtpbiomes.admin:
+    default: op

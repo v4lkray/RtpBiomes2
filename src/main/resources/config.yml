@@ -1,0 +1,32 @@
+# Worlds are named <world-prefix><biome>, e.g. rtp_plains
+world-prefix: "rtp_"
+# Fixed seeds => after a reset the land looks the same, only player changes are wiped
+seed-base: 20240601
+# Players are teleported to a random spot within +-this many blocks of 0,0
+teleport-range: 4000
+# A world is wiped this many seconds after the LAST player left it (only if someone had been in it)
+reset-delay-seconds: 30
+# Terrain shape: base height and hill size (blocks). Bigger amplitude = bigger hills.
+base-height: 72
+hill-amplitude: 12
+# tree-chance = chance (0..1) per chunk (16x16) of ONE tree. 0.10 => about 1 tree per 10 chunks.
+# trees = list of Bukkit TreeType names, one is picked randomly (repeat a name to make it more likely).
+biomes:
+  plains:
+    tree-chance: 0.10
+    trees: [TREE, TREE, TREE, BIG_TREE]
+  desert:
+    tree-chance: 0.0       # vanilla deserts have no trees. Set e.g. 0.05 and trees: [TREE] if you want some
+    trees: [TREE]
+  badlands:
+    tree-chance: 0.06      # like the vanilla "wooded badlands" variant
+    trees: [TREE]
+  snow:
+    tree-chance: 0.12
+    trees: [REDWOOD]       # normal spruce, like snowy plains
+  mushroom:
+    tree-chance: 0.10      # huge mushrooms (the vanilla "trees" of this biome)
+    trees: [RED_MUSHROOM, BROWN_MUSHROOM]
+  cherry:
+    tree-chance: 0.12
+    trees: [CHERRY]
